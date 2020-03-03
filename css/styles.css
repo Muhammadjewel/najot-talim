@@ -43,6 +43,75 @@ body {
   margin: 0;
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 20px;
   font-weight: 400;
+  background-color: #FAFBFC;
+  color: #222222;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  max-width: 1366px;
+  padding: 0 43px;
+  margin: 0 auto;
+}
+/* SITENAV */
+.sitenav {
+  padding: 10px 0;
+}
+.sitenav__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.sitenav__toggler {
+  display: none;
+}
+.sitenav__collapse {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+}
+.sitenav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 147px;
+  list-style-type: none;
+}
+.sitenav__item + .sitenav__item {
+  margin-left: 42px;
+}
+.sitenav__link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #222222;
+  transition: color 0.3s ease;
+}
+.sitenav__link:hover {
+  color: #FAB00B;
+}
+.sitenav__signup-link {
+  display: block;
+  padding: 10px;
+  margin-left: auto;
+  text-decoration: none;
+  color: #FAB00B;
+  transition: color 0.3s ease;
+}
+.sitenav__signup-link:hover {
+  color: #222222;
 }
