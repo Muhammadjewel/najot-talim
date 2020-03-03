@@ -190,3 +190,8 @@ body {
     color: #fff;
   }
 }
+@media (max-width: 510px) {
+  .sitenav__signup-link {
+    display: none;
+  }
+}
