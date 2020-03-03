@@ -180,18 +180,62 @@ body {
     margin-left: 20px;
     border-radius: 3px;
     background-color: transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease,
+      color 0.3s ease;
+  }
+  .sitenav__toggler:hover {
+    color: #FAB00B;
+    border-color: #222;
   }
   .sitenav__collapse {
     display: none;
   }
+  .sitenav--open .sitenav__collapse,
+  .sitenav--nojs .sitenav__collapse {
+    display: block;
+    width: 100%;
+    order: 1;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .sitenav__list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sitenav__item + .sitenav__item {
+    border-top: 1px solid #ccc;
+    margin-left: 0;
+  }
+  .sitenav__link {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
   .sitenav__signup-link {
+    border: 1px solid transparent;
     border-radius: 3px;
     background-color: #FAB00B;
     color: #fff;
+    transition: color 0.3s ease,
+      border 0.3s ease,
+      background-color 0.3s ease;
+  }
+  .sitenav__signup-link:hover {
+    border: 1px solid #FAB00B;
+    background-color: #fff;
+    color: #FAB00B;
   }
 }
 @media (max-width: 510px) {
+  .container {
+    padding: 0 20px;
+  }
   .sitenav__signup-link {
     display: none;
   }
 }
+
+/* Temporary */
+video { display: none; }
