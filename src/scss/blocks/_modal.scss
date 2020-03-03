@@ -1,0 +1,34 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal--open .modal__dialog {
+  animation: modal-slide-down 0.5s ease 1 forwards;
+}
+.modal__dialog {
+  position: relative;
+  max-width: 600px;
+  padding: 30px;
+  margin: 50px auto;
+  background-color: #fff;
+}
+.modal__close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+@media (max-width: 600px) {
+  .modal__dialog {
+    position: absolute;
+    max-width: 95%;
+    left: 5%;
+    bottom: 30px;
+    margin: auto;
+  }
+}

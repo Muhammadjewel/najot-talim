@@ -1,0 +1,28 @@
+/* LOGO */
+.logo {
+  margin-right: 60px;
+}
+.logo__link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo__img {
+  display: block;
+}
+.logo__img--text {
+  display: none;
+}
+
+@media (max-width: 1040px) {
+  .logo {
+    width: 100%;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 775px) {
+  .logo {
+    width: auto;
+    margin: 0;
+  }
+}

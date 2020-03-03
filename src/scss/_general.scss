@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #FAFBFC;
+  color: #222222;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
