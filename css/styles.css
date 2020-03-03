@@ -82,7 +82,11 @@ body {
   justify-content: space-between;
 }
 .logo {
-  margin-right: 70px;
+  margin-right: 60px;
+}
+.logo__link {
+  display: inline-block;
+  vertical-align: middle;
 }
 .logo__img {
   display: block;
@@ -143,10 +147,23 @@ body {
   }
 }
 @media (max-width: 1040px) {
+  .container {
+    padding: 0 30px;
+  }
   .logo {
+    width: 100%;
     margin: 0 auto 10px;
+    text-align: center;
   }
   .sitenav__collapse {
-    width: 100%;
+    margin-right: 50px;
+  }
+}
+@media (max-width: 860px) {
+  .sitenav__collapse {
+    margin-right: 20px;
+  }
+  .sitenav__item + .sitenav__item {
+    margin-left: 15px;
   }
 }
