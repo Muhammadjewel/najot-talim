@@ -111,15 +111,14 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-left: 147px;
   list-style-type: none;
 }
 .sitenav__item + .sitenav__item {
-  margin-left: 42px;
+  margin-left: 35px;
 }
 .sitenav__link {
   display: block;
-  padding: 10px;
+  padding: 8px;
   text-decoration: none;
   color: #222222;
   transition: color 0.3s ease;
@@ -129,7 +128,7 @@ body {
 }
 .sitenav__signup-link {
   display: block;
-  padding: 10px;
+  padding: 8px;
   margin-left: auto;
   text-decoration: none;
   color: #FAB00B;
@@ -137,4 +136,17 @@ body {
 }
 .sitenav__signup-link:hover {
   color: #222222;
+}
+@media (max-width: 1125px) {
+  .sitenav__item + .sitenav__item {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 1040px) {
+  .logo {
+    margin: 0 auto 10px;
+  }
+  .sitenav__collapse {
+    width: 100%;
+  }
 }
