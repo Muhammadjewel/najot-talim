@@ -66,12 +66,35 @@ body {
 /* SITENAV */
 .sitenav {
   padding: 10px 0;
+  background-color: #fff;
+}
+.sitenav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 .sitenav__container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.logo {
+  margin-right: 70px;
+}
+.logo__img {
+  display: block;
+}
+.logo__img--text {
+  display: none;
+}
+.sitenav--fixed .logo__img--symbol {
+  display: none;
+}
+.sitenav--fixed .logo__img--text {
+  display: block;
 }
 .sitenav__toggler {
   display: none;
