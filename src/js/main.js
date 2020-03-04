@@ -26,10 +26,14 @@ var DEBOUNCE_DELAY_FOR_SCROLL = 80;
 document.addEventListener('DOMContentLoaded', function () {
   var elSitenav = $('.sitenav');
   var elSitenavToggler = $('.sitenav__toggler');
+  var elIntroVideoWrapper = $('.intro__video-wrapper');
+  var elVideoPlayButton = $('.intro__play-button');
+  var elIntroVideo = $('.intro__video');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
   
+  // Fixed sitenav
   var makeSitenavFixed = function () {
     elSitenav.classList.add('sitenav--fixed');
     document.body.style.cssText = 'padding-top: ' + elSitenav.offsetHeight + 'px;';
@@ -48,10 +52,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
   
+  // Toggle sitenav__collapse
   var onElSitenavTogglerClick = function () {
     elSitenav.classList.toggle('sitenav--open');
+  };
+
+  // Control video player
+  var pauseVideo = function () {
+    elIntroVideoWrapper.classList.remove('intro__video-wrapper--playing');
+    elIntroVideo.controls = false;
+
+    elIntroVideo.removeEventListener('pause', onElIntroVideoPause);
+  };
+
+  var onElIntroVideoPause = function () {
+    pauseVideo();
+  };
+
+  var playIntroVideo = function () {
+    elIntroVideoWrapper.classList.add('intro__video-wrapper--playing');
+    elIntroVideo.controls = true;
+    elIntroVideo.play();
+
+    elIntroVideo.addEventListener('pause', onElIntroVideoPause);
+  };
+
+  var onElVideoPlayButtonClick = function () {
+    playIntroVideo();
   };
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
   elSitenavToggler.addEventListener('click', onElSitenavTogglerClick);
+  elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
 });
