@@ -12,7 +12,7 @@ var uglify = require('gulp-uglify');
 
 var sources = {
   html: 'src/*.html',
-  scss: 'src/scss/main.scss',
+  scss: 'src/scss/**/*.scss',
   js: [
   ]
 };
