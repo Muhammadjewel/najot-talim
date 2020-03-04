@@ -18,6 +18,19 @@
 </head>
 <body>
 
+  <svg style="display: none;">
+    <symbol id="arrow-right" viewBox="0 0 21 12">
+      <g transform="translate(-1298.975 -47)">
+        <g transform="translate(1307.975 47)">
+          <path d="M9.3,6l-.708.708,2.3,2.306L8.59,11.32l.708.708,3.014-3.014Z" transform="translate(-4.304 -3.014)" />
+          <path d="M0,0H12V12H0Z" fill="none" />
+        </g>
+        <rect width="11.975" height="1" transform="translate(1303 52.5)" />
+        <path d="M0,0H20.975V12H0Z" transform="translate(1298.975 47)" fill="none" />
+      </g>
+    </symbol>
+  </svg>
+
   <nav class="sitenav sitenav--nojs">
     <div class="container sitenav__container">
       <div class="logo">
@@ -49,7 +62,11 @@
       <div class="intro__text-wrapper">
         <h2 class="intro__heading">Najot Ta'lim markazi</h2>
         <p class="intro__text">It is the place to teach you the most modern occupations and skills you need. It is better to visit once than to hear a thousand times about our training center! What's more about enjoying the field you want, especially with people like you. Now, let's go over the basics.</p>
-        <button class="intro__cta" type="button">-></button>
+        <button class="intro__cta" type="button">
+          <svg class="intro__cta-arrow" width="21" height="12">
+            <use xlink:href="#arrow-right"></use>
+          </svg>
+        </button>
       </div>
 
       <div class="intro__video-wrapper">
