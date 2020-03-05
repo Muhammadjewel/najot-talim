@@ -69,8 +69,24 @@
 
       <div class="intro__video-wrapper">
         <button class="intro__play-button" type="button">
-          Play
-          <img src="img/play-icon.svg" alt="">
+          <span class="visually-hidden">Play</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+            <defs />
+            <defs>
+              <filter id="a" width="52" height="64" x="29" y="21" filterUnits="userSpaceOnUse">
+                <feOffset dy="3" />
+                <feGaussianBlur result="b" stdDeviation="3" />
+                <feFlood flood-color="#fab00b" flood-opacity=".161" />
+                <feComposite in2="b" operator="in" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <rect width="100" height="100" fill="#fafbfc" rx="50" />
+            <g filter="url(#a)">
+              <path fill="#fab00b"
+                d="M69.551 48.343a2 2 0 010 3.313l-28.43 19.233A2 2 0 0138 69.232V30.768a2 2 0 013.121-1.657z" />
+            </g>
+          </svg>
         </button>
         <video class="intro__video" src="media/video.mp4" poster="img/najot-talim-cover.png"></video>
       </div>
