@@ -12,3 +12,29 @@
   margin-left: 30px;
   margin-bottom: 30px;
 }
+.courses__item:nth-child(4n + 1) .course__footer {
+  background-color: rgba(249, 216, 63, 0.2);
+}
+.courses__item:nth-child(4n + 2) .course__footer {
+  background-color: rgba(80, 69, 174, 0.2);
+}
+.courses__item:nth-child(4n + 3) .course__footer {
+  background-color: rgba(77, 191, 217, 0.2);
+}
+.courses__item:nth-child(4n + 4) .course__footer {
+  background-color: rgba(0, 174, 239, 0.2);
+}
+@media (max-width: 810px) {
+  .courses__list {
+    margin-left: 0;
+  }
+  .courses__item {
+    width: 90%;
+    margin: 0 auto 30px;
+  } 
+}
+@media (max-width: 710px) {
+  .courses__item {
+    width: 100%;
+  }
+}
