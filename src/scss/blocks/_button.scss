@@ -1,68 +1,62 @@
 .button {
   display: inline-block;
   vertical-align: middle;
-  max-width: 38px;
-  min-width: 38px;
-  min-height: 38px;
-  appearance: none;
-  padding: 10px 0;
-  border: 0.5px solid #E4E4E4;
+  padding: 10px;
+  border: 0.5px solid #e4e4e4;
   border-radius: 4px;
-  background: transparent;
+  appearance: none;
+  background: none;
   color: #000;
-  cursor: pointer;
-  text-decoration: none;
+  font-size: 15px;
+  line-height: 16px;
   text-align: center;
-  transition: max-width $transition-duration ease,
-    padding $transition-duration ease,
-    background-color $transition-duration ease,
-    color $transition-duration ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 
+  &--open,
   &:hover,
   &:focus {
-    max-width: 9999px;
-    border-color:transparent;
-    padding: 10px 24px;
+    border-color: transparent;
     background-color: $primary-color;
     color: #fff;
   }
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+    box-shadow: 0 0 0 4px rgba($primary-color, 0.3);
   }
 
   &--full:hover,
   &--full:focus {
-    display: block;
     width: 100%;
   }
+}
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button__text {
   display: inline-block;
   max-width: 0;
   overflow: hidden;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
   transform-origin: left center;
-  transform: translateY(3px) scaleX(0);
-  transition: transform $transition-duration ease;
+  transform: scaleX(0);
+  transition: transform $transition-duration ease,
+    max-width $transition-duration ease,
+    margin $transition-duration ease;
 }
-.button__arrow {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-  transition: fill $transition-duration ease;
-}
+.button--open .button__text,
 .button:hover .button__text,
 .button:focus .button__text {
-  max-width: 9999px;
-  transform: translateY(3px) scaleX(1);
+  max-width: 3000px;
+  margin-right: 7px;
+  transform: scaleX(1);
 }
-
-.button:hover .button__arrow,
-.button:focus .button__arrow {
+.button--open svg,
+.button:hover svg,
+.button:focus svg {
   fill: #fff;
 }
