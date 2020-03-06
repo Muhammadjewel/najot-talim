@@ -1,6 +1,13 @@
 .section {
   padding: 50px 0;
 }
+.section__heading {
+  padding-left: 10px;
+  border-left: 5px solid $primary-color;
+  margin-bottom: 57px;
+  font-size: 29px;
+  line-height: 38px;
+}
 @media (max-width: 775px) {
   .section {
     padding: 35px 0;
