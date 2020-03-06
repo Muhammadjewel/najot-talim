@@ -1,0 +1,68 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  appearance: none;
+  padding: 10px 0;
+  border: 0.5px solid #E4E4E4;
+  border-radius: 4px;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: max-width $transition-duration ease,
+    padding $transition-duration ease,
+    background-color $transition-duration ease,
+    color $transition-duration ease;
+
+  &:hover,
+  &:focus {
+    max-width: 9999px;
+    border-color:transparent;
+    padding: 10px 24px;
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
+
+  &--full:hover,
+  &--full:focus {
+    display: block;
+    width: 100%;
+  }
+}
+.button__text {
+  display: inline-block;
+  max-width: 0;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  transform-origin: left center;
+  transform: translateY(3px) scaleX(0);
+  transition: transform $transition-duration ease;
+}
+.button__arrow {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  transition: fill $transition-duration ease;
+}
+.button:hover .button__text,
+.button:focus .button__text {
+  max-width: 9999px;
+  transform: translateY(3px) scaleX(1);
+}
+
+.button:hover .button__arrow,
+.button:focus .button__arrow {
+  fill: #fff;
+}
