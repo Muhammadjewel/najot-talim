@@ -1,0 +1,31 @@
+.stats__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.stats__item {
+  width: calc(33.33% - 30px);
+  padding: 40px 30px;
+  border-radius: 6px;
+  background-color: #e4e4e4;
+}
+.stats__number {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: bold;
+  color: $primary-color;
+}
+.stats__value {
+  margin-top: 0;
+  font-size: 19px;
+  line-height: 26px;
+  font-weight: bold;
+}
+.stats__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
