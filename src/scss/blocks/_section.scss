@@ -9,6 +9,28 @@
   font-size: 29px;
   line-height: 38px;
 }
+.section__footer {
+  padding-top: 40px;
+  text-align: center;
+}
+.section__footer-link {
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 1px solid #468aff;
+  color: #468aff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color $transition-duration ease,
+    border $transition-duration ease;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+.section__footer-link-icon {
+  fill: #468aff;
+}
 @media (max-width: 1040px) {
   .section__heading {
     margin-bottom: 40px;
