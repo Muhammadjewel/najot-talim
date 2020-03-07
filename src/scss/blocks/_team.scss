@@ -69,3 +69,11 @@
     font-size: 18px;
   }
 }
+@media (max-width: 510px) {
+  .team-member__info {
+    padding: 20px;
+  }
+  .team-member__position {
+    margin-top: 10px;
+  }
+}
