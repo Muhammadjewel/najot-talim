@@ -84,4 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
   elSitenavToggler.addEventListener('click', onElSitenavTogglerClick);
   elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
+
+  // Slider
+  var slider = tns({
+    container: '.companies__list',
+    items: 5,
+    slideBy: 'page',
+    autoplay: true
+  });
 });

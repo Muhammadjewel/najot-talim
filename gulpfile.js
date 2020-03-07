@@ -14,6 +14,8 @@ var sources = {
   html: 'src/*.html',
   scss: 'src/scss/**/*.scss',
   js: [
+    'node_modules/tiny-slider/dist/min/tiny-slider.js',
+    'src/js/main.js'
   ]
 };
 
