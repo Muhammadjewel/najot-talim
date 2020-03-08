@@ -88,8 +88,30 @@ document.addEventListener('DOMContentLoaded', function () {
   // Slider
   var slider = tns({
     container: '.companies__list',
-    items: 5,
-    slideBy: 'page',
-    autoplay: true
+    nav: false,
+    items: 1,
+    slideBy: 1,
+    autoplay: false,
+    mouseDrag: true,
+    swipeAngle: false,
+    loop: true,
+    responsive: {
+      480: {
+        items: 2,
+        slideBy: 2
+      },
+      680: {
+        items: 3,
+        slideBy: 3
+      },
+      900: {
+        items: 4,
+        slideBy: 4
+      },
+      1200: {
+        items: 5,
+        slideBy: 5
+      }
+    }
   });
 });

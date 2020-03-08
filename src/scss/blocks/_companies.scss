@@ -2,19 +2,19 @@
   padding: 40px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
 }
-// .companies__list {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 0;
-//   margin: 0;
-//   list-style-type: none;
-// }
-.companies__item {
+.companies__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.companies__item-inner {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 100px;
+  max-width: 200px;
+  height: 80px;
+  margin: 0 auto;
   border-radius: 6px;
   background-color: rgba($primary-color, 0.10);
 }
