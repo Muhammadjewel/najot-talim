@@ -1,0 +1,27 @@
+.slider-button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+    background: #fff;
+    opacity: 1;
+
+    svg {
+      fill: $primary-color;
+    }
+  }
+
+  &--prev {
+    left: 10px;
+    transform: translateY(-50%) rotateY(180deg);
+  }
+
+  &--next {
+    right: 10px;
+  }
+}

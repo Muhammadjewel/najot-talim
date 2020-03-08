@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
     mouseDrag: true,
     swipeAngle: false,
     loop: true,
+    prevButton: '.slider-button--prev',
+    nextButton: '.slider-button--next',
     responsive: {
       480: {
         items: 2,
