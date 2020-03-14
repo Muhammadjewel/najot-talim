@@ -7,6 +7,8 @@
   list-style-type: none;
 }
 .stats__item {
+  position: relative;
+  overflow: hidden;
   width: calc(33.33% - 30px);
   padding: 40px 30px;
   border-radius: 6px;
@@ -18,6 +20,15 @@
     background-color: $primary-color;
     color: #fff;
   }
+}
+.stats__bg-icon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -100px;
+  width: 200px;
+  height: 140px;
+  color: #fff;
 }
 .stats__number {
   margin-top: 0;
