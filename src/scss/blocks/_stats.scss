@@ -25,12 +25,15 @@
   position: absolute;
   z-index: 1;
   top: 0;
-  right: -100px;
+  right: 0;
+  transform: translateX(50%);
   width: 200px;
   height: 140px;
   color: #fff;
 }
 .stats__number {
+  position: relative;
+  z-index: 1;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 72px;
@@ -43,14 +46,33 @@
   color: #fff;
 }
 .stats__value {
+  position: relative;
+  z-index: 1;
   margin-top: 0;
   font-size: 19px;
   line-height: 26px;
   font-weight: bold;
 }
 .stats__text {
+  position: relative;
+  z-index: 1;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (max-width: 1125px) {
+  .stats__bg-icon {
+    width: 220px;
+    height: 100px;
+  }
+}
+@media (max-width: 1040px) {
+  .stats__bg-icon {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+  }
 }
 @media (max-width: 950px) {
   .stats__item {
