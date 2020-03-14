@@ -1,0 +1,28 @@
+.registration-form {
+	position: relative;
+	z-index: 1;
+	top: -50px;
+	max-width: 350px;
+	padding: 20px;
+	margin-right: 100px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+}
+.registration-form__group {
+	margin-bottom: 15px;
+
+	& + .button {
+		margin-top: 30px;
+	}
+}
+.registration-form__field {
+	width: 100%;
+	padding: 10px;
+	border: 0;
+	border-bottom: 2px solid #e4e4e4;
+	transition: border-bottom $transition-duration ease;
+
+	&:focus {
+		outline: 0;
+		border-bottom-color: $primary-color;
+	}
+}
