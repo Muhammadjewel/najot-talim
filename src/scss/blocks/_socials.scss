@@ -11,9 +11,18 @@
 	list-style-type: none;
 }
 .socials__item {
-	margin: 0 20px;
+	margin: 0 15px;
 }
 .socials__link {
+	display: block;
 	color: #222;
 	text-decoration: none;
+
+	svg {
+		display: block;
+		transition: fill $transition-duration ease;
+	}
+}
+.socials__link:hover svg {
+	fill: $primary-color;
 }

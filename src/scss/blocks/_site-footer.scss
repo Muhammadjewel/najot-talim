@@ -1,4 +1,6 @@
 .site-footer {
+	padding: 60px 0 30px;
+	background-color: #fff;
 	text-align: center;
 }
 .site-footer__links-list {
@@ -8,7 +10,7 @@
 	align-items: center;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 	list-style-type: none;
 }
 .site-footer__links-item {
@@ -17,4 +19,10 @@
 .site-footer__link {
 	color: #222;
 	text-decoration: none;
+	transition: color $transition-duration ease;
+
+	&:hover,
+	&:focus {
+		color: $primary-color;
+	}
 }
