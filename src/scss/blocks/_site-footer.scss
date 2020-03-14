@@ -1,0 +1,20 @@
+.site-footer {
+	text-align: center;
+}
+.site-footer__links-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 50px;
+	list-style-type: none;
+}
+.site-footer__links-item {
+	margin: 0 20px;
+}
+.site-footer__link {
+	color: #222;
+	text-decoration: none;
+}
