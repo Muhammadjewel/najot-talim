@@ -26,3 +26,11 @@
 .socials__link:hover svg {
 	fill: $primary-color;
 }
+@media (max-width: 430px) {
+	.socials {
+		margin-bottom: 20px;
+	}
+	.socials__item {
+		margin: 0 10px;
+	}
+}
