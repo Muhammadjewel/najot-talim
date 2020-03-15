@@ -1,13 +1,63 @@
 .registration {
 	margin-top: 150px;
-	background-color: #fff;
+	background-color: #f7f7f7;
 }
 .registration__container {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	padding: 0 100px;
 }
 .registration__motto {
 	flex-grow: 1;
 	text-align: center;
+}
+.registration__logo {
+	margin-bottom: 20px;
+	vertical-align: middle;
+}
+.registration__text {
+	margin-top: 0;
+	font-size: 26px;
+	line-height: 36px;
+	font-weight: 600;
+}
+@media (max-width: 960px) {
+	.registration {
+		padding: 50px 0;
+		margin-top: 0;
+	}
+	.registration__container {
+		justify-content: space-between;
+	}
+}
+@media (max-width: 930px) {
+	.registration__text {
+		font-size: 22px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 930px) {
+	.registration__container {
+		justify-content: center;
+	}
+	.registration__motto {
+		order: -1;
+		width: 90%;
+	}
+	.registration__text {
+		margin-bottom: 40px;
+	}
+}
+@media (max-width: 590px) {
+	.registration {
+		padding: 60px 0;
+	}
+	.registration__motto {
+		width: 100%;
+	}
+	.registration__text {
+		font-size: 20px;
+		line-height: 24px;
+	}
 }
