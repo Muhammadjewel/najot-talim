@@ -44,6 +44,18 @@
 		border-bottom-color: $primary-color;
 	}
 }
+@media (max-width: 1200px) {
+	.registration-form--promo-slider {
+		top: 40px;
+		left: 150px;
+	}
+}
+@media (max-width: 1120px) {
+	.registration-form--promo-slider {
+		top: 20px;
+		left: 100px;
+	}
+}
 @media (max-width: 1125px) {
 	.registration-form {
 		margin-right: 0;

@@ -28,6 +28,7 @@
 .promo-slider__content {
   width: 50%;
   padding: 80px 0;
+  padding-right: 40px;
   color: #fff;
 }
 .promo-slider__title {
@@ -48,4 +49,14 @@
   bottom: 30px;
   transform: translateX(-50%);
   z-index: 10;
+}
+@media (max-width: 1200px) {
+  .promo-slider__content {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 1120px) {
+	.promo-slider__content {
+    padding-top: 20px;
+  }
 }

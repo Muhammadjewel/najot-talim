@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     items: 1,
     slideBy: 1,
     autoplay: true,
+    autoplayButtonOutput: false,
     mouseDrag: true,
     swipeAngle: false,
     loop: true
