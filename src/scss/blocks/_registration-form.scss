@@ -7,6 +7,12 @@
 	margin-right: 130px;
 	background-color: #fff;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.16);
+
+	&--promo-slider {
+		position: absolute;
+		top: 80px;
+		left: 205px;
+	}
 }
 .registration-form__heading {
 	margin-top: 0;

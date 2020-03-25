@@ -86,7 +86,19 @@ document.addEventListener('DOMContentLoaded', function () {
   elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
 
   // Slider
-  var slider = tns({
+  var promoSlider = tns({
+    container: '.promo-slider__list',
+    nav: true,
+    controls: false,
+    items: 1,
+    slideBy: 1,
+    autoplay: true,
+    mouseDrag: true,
+    swipeAngle: false,
+    loop: true
+  });
+
+  var companiesSlider = tns({
     container: '.companies__list',
     nav: false,
     items: 1,

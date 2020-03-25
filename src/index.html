@@ -93,6 +93,84 @@
   </nav>
 
 
+  <section class="section promo-slider">
+    <h2 class="visually-hidden">Kurslar slayderi</h2>
+    <div class="container promo-slider__container">
+      <form class="registration-form registration-form--promo-slider" action="" method="POST">
+        <h2 class="registration-form__heading">Ro'yxatdan o'tish</h2>
+        <p class="registration-form__text">Sizni qiziqtira olgan o'quv kursni tanlang va bepul ochiq darsga ro'yxatdan o'ting.
+        </p>
+        <p class="registration-form__group">
+          <label class="visually-hidden" for="name-input">Ism*</label>
+          <input class="registration-form__field" id="name-input" name="name" type="text" placeholder="Ism" required>
+        </p>
+        <p class="registration-form__group">
+          <label class="visually-hidden" for="phone-input">Telefon raqami*</label>
+          <input class="registration-form__field" id="phone-input" name="phone_number" type="tel" placeholder="Telefon raqami"
+            required>
+        </p>
+        <p class="registration-form__group">
+          <label class="visually-hidden" for="course-select">O'quv kurs</label>
+          <select class="registration-form__field" name="course" id="course-select">
+            <option value="" selected disabled>Kursni tanlang</option>
+            <option value="frontend">Frontend dasturlash</option>
+            <option value="backend">Backend dasturlash</option>
+            <option value="graphic_design">Grafik dizayn</option>
+            <option value="smm">SMM</option>
+            <option value="digital_marketing">Raqamli marketing</option>
+          </select>
+        </p>
+        <button class="button button--open" type="submit">
+          <div class="button__wrapper">
+            <span class="button__text">Ro'yxatdan o'tish</span>
+            <svg class="button__arrow" aria-hidden="true" focusable="false" width="21" height="12">
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+          </div>
+        </button>
+      </form>
+
+      <ul class="promo-slider__list">
+        <li class="promo-slider__item">
+          <img class="promo-slider__poster" src="https://picsum.photos/1300/600?random=1" alt="Rasm">
+          <div class="promo-slider__item-inner">
+            <div class="promo-slider__content">
+              <h3 class="promo-slider__title">Raqamli marketing</h3>
+              <p class="promo-slider__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis libero sit ex voluptates impedit officia!</p>
+              <a class="button button--open" href="#">
+                <div class="button__wrapper">
+                  <span class="button__text">Batafsil</span>
+                  <svg class="button__arrow" aria-hidden="true" focusable="false" width="21" height="12">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="promo-slider__item">
+          <img class="promo-slider__poster" src="https://picsum.photos/1300/600?random=2" alt="Rasm">
+          <div class="promo-slider__item-inner">
+            <div class="promo-slider__content">
+              <h3 class="promo-slider__title">Raqamli marketing</h3>
+              <p class="promo-slider__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis libero sit ex
+                voluptates impedit officia!</p>
+              <a class="button button--open" href="#">
+                <div class="button__wrapper">
+                  <span class="button__text">Batafsil</span>
+                  <svg class="button__arrow" aria-hidden="true" focusable="false" width="21" height="12">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
   <section class="section intro" id="intro">
     <div class="container intro__container">
       <div class="intro__text-wrapper">
