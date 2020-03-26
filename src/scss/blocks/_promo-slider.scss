@@ -55,8 +55,20 @@
     padding-top: 40px;
   }
 }
-@media (max-width: 1120px) {
-	.promo-slider__content {
-    padding-top: 20px;
+@media (max-width: 990px) {
+  .promo-slider__content {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+  }
+  .promo-slider__poster {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 710px) {
+  .promo-slider__title {
+    font-size: 28px;
+    line-height: 32px;
   }
 }

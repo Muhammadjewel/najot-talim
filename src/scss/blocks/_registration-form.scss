@@ -61,6 +61,11 @@
 		margin-right: 0;
 	}
 }
+@media (max-width: 990px) {
+	.registration-form--promo-slider {
+		display: none;
+	}
+}
 @media (max-width: 960px) {
 	.registration-form {
 		top: 0;
