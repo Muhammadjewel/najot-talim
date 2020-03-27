@@ -50,6 +50,10 @@
     bottom: 30px;
     transform: translateX(-50%);
     z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 
     button {
       width: 30px;
@@ -68,6 +72,11 @@
 @media (max-width: 1200px) {
   .promo-slider__content {
     padding-top: 40px;
+  }
+}
+@media (max-width: 1040px) {
+  .promo-slider .tns-nav {
+    bottom: 20px;
   }
 }
 @media (max-width: 990px) {
