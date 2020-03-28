@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var elsReviewVideoButton = $$('.review__video-button');
   var elsReviewCloseButton = $$('.review__close-button');
   var elModal = $('.modal');
-  var elModalCloseButton = $('.modal__close-button');
+  var elModalCloseButton = elModal.querySelector('.modal__close-button');
+  var elModalIframe = elModal.querySelector('.modal__youtube-iframe');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -166,8 +167,14 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Open review videos in modal
-  var onElReviewVideoButtonClick = function () {
+  var showReviewVideo = function (evt) {
+    var reviewVideoLink = 'https://www.youtube-nocookie.com/embed/' + evt.target.parentElement.dataset.youtubeId + '?autoplay=1';
+    elModalIframe.src = reviewVideoLink;
+  };
+
+  var onElReviewVideoButtonClick = function (evt) {
     openModal();
+    showReviewVideo(evt);
   };
 
   elsReviewVideoButton.forEach(function (reviewVideoButton) {
