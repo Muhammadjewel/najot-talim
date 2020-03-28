@@ -92,10 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
     openReview(evt);
   };
 
-  elsReviewOpener.forEach(function (reviewOpener) {
-    reviewOpener.addEventListener('click', onReviewOpenerClick);
-  });
-
   var closeReview = function (evt) {
     evt.target.closest('.review').classList.remove('review--open');
   };
@@ -104,13 +100,39 @@ document.addEventListener('DOMContentLoaded', function () {
     closeReview(evt);
   };
 
-  elsReviewCloseButton.forEach(function (reviewCloseButton) {
-    reviewCloseButton.addEventListener('click', onReviewCloseButtonClick);
-  });
+  var addReviewsEventListeners = function () {
+    elsReviewOpener.forEach(function (reviewOpener) {
+      reviewOpener.addEventListener('click', onReviewOpenerClick);
+    });
+  
+    elsReviewCloseButton.forEach(function (reviewCloseButton) {
+      reviewCloseButton.addEventListener('click', onReviewCloseButtonClick);
+    });
+  };
+
+  var removeReviewsEventListeners = function () {
+    elsReviewOpener.forEach(function (reviewOpener) {
+      reviewOpener.removeEventListener('click', onReviewOpenerClick);
+    });
+
+    elsReviewCloseButton.forEach(function (reviewCloseButton) {
+      reviewCloseButton.removeEventListener('click', onReviewCloseButtonClick);
+    });
+  };
+
+  var onWindowResize = function () {
+    if (document.documentElement.clientWidth >= 775) {
+      addReviewsEventListeners();
+    } else {
+      removeReviewsEventListeners();
+    }
+  };
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
+  window.addEventListener('resize', onWindowResize);
   elSitenavToggler.addEventListener('click', onElSitenavTogglerClick);
   elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
+  addReviewsEventListeners();
 
   // Slider
   var promoSlider = tns({

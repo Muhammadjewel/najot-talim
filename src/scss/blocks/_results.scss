@@ -125,6 +125,9 @@
   list-style-type: none;
 }
 @media (max-width: 910px) {
+  .results__logo {
+    top: 41%;
+  }
   .results__line--2 {
     bottom: 46%;
     left: 42%;
@@ -132,5 +135,11 @@
   .results__line--4 {
     left: 54%;
     bottom: 47%;
+  }
+}
+@media (max-width: 775px) {
+  .results__logo,
+  .results__line {
+    display: none;
   }
 }
