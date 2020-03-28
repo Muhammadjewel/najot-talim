@@ -729,17 +729,27 @@
 
       <div class="results__inner">
         <div class="results__logo">
-          <img src="img/logo-round.svg" alt="Najot Ta'lim o'quv markazi logotipi" width="100" height="95">
+            <img src="img/logo-round.svg" alt="Najot Ta'lim o'quv markazi logotipi" width="100" height="95">
         </div>
 
         <ul class="results__list">
           <li class="results__item review">
-            <img class="review__avatar" src="https://picsum.photos/63" alt="Avatar" width="63" height="63">
+            <button class="review__toggler" type="button">
+              <img class="review__avatar" src="https://picsum.photos/63" alt="Avatar" width="63" height="63">
+            </button>
+
             <div class="review__inner">
               <p class="review__person">FirstName LastName</p>
               <div class="review__sphere">Designer</div>
               <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto facilis vitae a praesentium quia nesciunt.</p>
-              <button class="review__video-button">Watch video</button>
+              <button class="review__video-button">
+                <div class="review__video-button-inner">
+                  Watch video
+                  <svg class="button__arrow" aria-hidden="true" focusable="false" width="21" height="12">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+              </button>
             </div>
           </li>
         </ul>

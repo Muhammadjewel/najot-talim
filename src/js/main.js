@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var elIntroVideoWrapper = $('.intro__video-wrapper');
   var elVideoPlayButton = $('.intro__play-button');
   var elIntroVideo = $('.intro__video');
+  var elsReviewToggler = $$('.review__toggler');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -80,6 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var onElVideoPlayButtonClick = function () {
     playIntroVideo();
   };
+
+  var closeOtherReviews = function () {
+    elsReviewToggler.forEach(function (reviewToggler) {
+      reviewToggler.classList.remove('review--open');
+    });
+  };
+
+  elsReviewToggler.forEach(function (reviewToggler) {
+    reviewToggler.addEventListener('click', function () {
+      closeOtherReviews();
+      this.parentElement.classList.toggle('review--open');
+    });
+  });
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
   elSitenavToggler.addEventListener('click', onElSitenavTogglerClick);
