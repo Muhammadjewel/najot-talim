@@ -22,6 +22,7 @@ var debounce = function (func, wait, immediate) {
 };
 
 var DEBOUNCE_DELAY_FOR_SCROLL = 80;
+var ESC_KEYCODE = 27;
 
 document.addEventListener('DOMContentLoaded', function () {
   var elSitenav = $('.sitenav');
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var elsReviewVideoButton = $$('.review__video-button');
   var elsReviewCloseButton = $$('.review__close-button');
   var elModal = $('.modal');
+  var elModalCloseButton = $('.modal__close-button');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -131,18 +133,45 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Modal opening and closing
-  var openModal = function () {)
+  var closeModal = function () {
+    elModal.classList.remove('modal--open');
+
+    elModal.removeEventListener('click', onElModalClick);
+    elModalCloseButton.removeEventListener('click', onElModalCloseButtonClick);
+    document.removeEventListener('keyup', onDocumentKeyUp);
+  };
+
+  var onElModalClick = function (evt) {
+    if (evt.target.matches('.modal')) {
+      closeModal();
+    }
+  };
+
+  var onElModalCloseButtonClick = function () {
+    closeModal();
+  };
+
+  var onDocumentKeyUp = function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      closeModal();
+    }
+  };
+
+  var openModal = function () {
     elModal.classList.add('modal--open');
+
+    elModal.addEventListener('click', onElModalClick);
+    elModalCloseButton.addEventListener('click', onElModalCloseButtonClick);
+    document.addEventListener('keyup', onDocumentKeyUp);
   };
 
   // Open review videos in modal
-  var onReviewVideoButtonClick = function (evt) {
-    console.dir(evt.target.parentElement.dataset.youtubeId);
+  var onElReviewVideoButtonClick = function () {
     openModal();
   };
 
   elsReviewVideoButton.forEach(function (reviewVideoButton) {
-    reviewVideoButton.addEventListener('click', onReviewVideoButtonClick);
+    reviewVideoButton.addEventListener('click', onElReviewVideoButtonClick);
   });
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));

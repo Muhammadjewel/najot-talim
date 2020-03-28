@@ -21,6 +21,10 @@
   padding: 30px 45px;
   margin: 100px auto;
   background-color: #fff;
+
+  &--youtube {
+    padding: 0;
+  }
 }
 .modal__close-button {
   position: absolute;
