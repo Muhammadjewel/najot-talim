@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var elVideoPlayButton = $('.intro__play-button');
   var elIntroVideo = $('.intro__video');
   var elsReviewOpener = $$('.review__opener');
+  var elsReviewVideoButton = $$('.review__video-button');
   var elsReviewCloseButton = $$('.review__close-button');
+  var elModal = $('.modal');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -127,6 +129,21 @@ document.addEventListener('DOMContentLoaded', function () {
       removeReviewsEventListeners();
     }
   };
+
+  // Modal opening and closing
+  var openModal = function () {)
+    elModal.classList.add('modal--open');
+  };
+
+  // Open review videos in modal
+  var onReviewVideoButtonClick = function (evt) {
+    console.dir(evt.target.parentElement.dataset.youtubeId);
+    openModal();
+  };
+
+  elsReviewVideoButton.forEach(function (reviewVideoButton) {
+    reviewVideoButton.addEventListener('click', onReviewVideoButtonClick);
+  });
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
   window.addEventListener('resize', onWindowResize);
