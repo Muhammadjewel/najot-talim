@@ -16,9 +16,109 @@
   align-items: center;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+    content: "";
+  }
+}
+.results__logo-img {
+  position: relative;
+  z-index: 1;
+}
+.results__line {
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--1 {
+    bottom: 50%;
+    right: 50%;
+    width: 404px;
+    height: 195px;
+    background-image: url("../img/review-line-1.svg");
+  }
+
+  &--2 {
+    bottom: 50%;
+    right: 50%;
+    width: 105px;
+    height: 276px;
+    background-image: url("../img/review-line-2.svg");
+  }
+
+  &--3 {
+    bottom: 50%;
+    left: 50%;
+    width: 115px;
+    height: 235px;
+    background-image: url("../img/review-line-3.svg");
+  }
+
+  &--4 {
+    bottom: 50%;
+    left: 50%;
+    width: 375px;
+    height: 260px;
+    background-image: url("../img/review-line-4.svg");
+  }
+
+  &--5 {
+    top: 50%;
+    right: 50%;
+    width: 267px;
+    height: 27px;
+    background-image: url("../img/review-line-5.svg");
+  }
+
+  &--6 {
+    bottom: 50%;
+    left: 50%;
+    width: 262px;
+    height: 64px;
+    background-image: url("../img/review-line-6.svg");
+  }
+
+  &--7 {
+    top: 50%;
+    right: 50%;
+    width: 452px;
+    height: 207px;
+    background-image: url("../img/review-line-7.svg");
+  }
+
+  &--8 {
+    top: 50%;
+    right: 50%;
+    width: 137px;
+    height: 182px;
+    background-image: url("../img/review-line-8.svg");
+  }
+
+  &--9 {
+    top: 50%;
+    left: 50%;
+    width: 133px;
+    height: 224px;
+    background-image: url("../img/review-line-9.svg");
+  }
+
+  &--10 {
+    top: 50%;
+    left: 50%;
+    width: 406px;
+    height: 245px;
+    background-image: url("../img/review-line-10.svg");
+  }
 }
 .results__list {
   padding: 0;

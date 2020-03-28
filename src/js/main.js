@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var elIntroVideoWrapper = $('.intro__video-wrapper');
   var elVideoPlayButton = $('.intro__play-button');
   var elIntroVideo = $('.intro__video');
-  var elsReviewToggler = $$('.review__toggler');
+  var elsReviewOpener = $$('.review__opener');
+  var elsReviewCloseButton = $$('.review__close-button');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -82,17 +83,29 @@ document.addEventListener('DOMContentLoaded', function () {
     playIntroVideo();
   };
 
-  var closeOtherReviews = function () {
-    elsReviewToggler.forEach(function (reviewToggler) {
-      reviewToggler.classList.remove('review--open');
-    });
+  // Opening and closing reviews
+  var openReview = function (evt) {
+    evt.target.closest('.review').classList.add('review--open');
   };
 
-  elsReviewToggler.forEach(function (reviewToggler) {
-    reviewToggler.addEventListener('click', function () {
-      closeOtherReviews();
-      this.parentElement.classList.toggle('review--open');
-    });
+  var onReviewOpenerClick = function (evt) {
+    openReview(evt);
+  };
+
+  elsReviewOpener.forEach(function (reviewOpener) {
+    reviewOpener.addEventListener('click', onReviewOpenerClick);
+  });
+
+  var closeReview = function (evt) {
+    evt.target.closest('.review').classList.remove('review--open');
+  };
+
+  var onReviewCloseButtonClick = function (evt) {
+    closeReview(evt);
+  };
+
+  elsReviewCloseButton.forEach(function (reviewCloseButton) {
+    reviewCloseButton.addEventListener('click', onReviewCloseButtonClick);
   });
   
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
