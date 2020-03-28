@@ -1,12 +1,16 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 50;
+  z-index: 100;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+
+  &--open {
+    display: block;
+  }
 }
 .modal--open .modal__dialog {
   animation: modal-slide-down 0.5s ease 1 forwards;
@@ -14,14 +18,14 @@
 .modal__dialog {
   position: relative;
   max-width: 600px;
-  padding: 30px;
-  margin: 50px auto;
+  padding: 30px 45px;
+  margin: 100px auto;
   background-color: #fff;
 }
 .modal__close-button {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
 }
 @media (max-width: 600px) {
   .modal__dialog {
