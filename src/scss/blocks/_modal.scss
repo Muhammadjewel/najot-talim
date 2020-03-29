@@ -23,11 +23,13 @@
   background-color: #fff;
 
   &--youtube {
+    max-width: 800px;
     padding: 0;
   }
 }
 .modal__close-button {
   position: absolute;
+  z-index: 10;
   top: 20px;
   right: 20px;
 }
