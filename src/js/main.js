@@ -23,6 +23,7 @@ var debounce = function (func, wait, immediate) {
 
 var DEBOUNCE_DELAY_FOR_SCROLL = 80;
 var ESC_KEYCODE = 27;
+var REVIEW_VIDEO_LINK;
 
 document.addEventListener('DOMContentLoaded', function () {
   var elSitenav = $('.sitenav');
@@ -140,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
     elModal.removeEventListener('click', onElModalClick);
     elModalCloseButton.removeEventListener('click', onElModalCloseButtonClick);
     document.removeEventListener('keyup', onDocumentKeyUp);
+
+    elModalIframe.src = REVIEW_VIDEO_LINK;
   };
 
   var onElModalClick = function (evt) {
@@ -168,8 +171,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Open review videos in modal
   var showReviewVideo = function (evt) {
-    var reviewVideoLink = 'https://www.youtube-nocookie.com/embed/' + evt.target.parentElement.dataset.youtubeId + '?autoplay=1';
-    elModalIframe.src = reviewVideoLink;
+    REVIEW_VIDEO_LINK = 'https://www.youtube-nocookie.com/embed/' + evt.target.parentElement.dataset.youtubeId;
+    elModalIframe.src = REVIEW_VIDEO_LINK + '?autoplay=1';
   };
 
   var onElReviewVideoButtonClick = function (evt) {
