@@ -66,27 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Control video player
-  var pauseVideo = function () {
-    elIntroVideoWrapper.classList.remove('intro__video-wrapper--playing');
-    elIntroVideo.controls = false;
-
-    elIntroVideo.removeEventListener('pause', onElIntroVideoPause);
-  };
-
-  var onElIntroVideoPause = function () {
-    pauseVideo();
-  };
-
-  var playIntroVideo = function () {
+  var playIntroVideo = function (iframeSource) {
     elIntroVideoWrapper.classList.add('intro__video-wrapper--playing');
-    elIntroVideo.controls = true;
-    elIntroVideo.play();
-
-    elIntroVideo.addEventListener('pause', onElIntroVideoPause);
+    elIntroVideo.src = iframeSource + '?autoplay=1';
   };
 
-  var onElVideoPlayButtonClick = function () {
-    playIntroVideo();
+  var onElVideoPlayButtonClick = function (evt) {
+    var iframeSource = evt.target.closest('.intro__play-button').dataset.youtubeIframe;
+    playIntroVideo(iframeSource);
   };
 
   // Opening and closing reviews
@@ -187,7 +174,9 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', debounce(onWindowScroll, DEBOUNCE_DELAY_FOR_SCROLL));
   window.addEventListener('resize', onWindowResize);
   elSitenavToggler.addEventListener('click', onElSitenavTogglerClick);
-  elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
+  if (elVideoPlayButton) {
+    elVideoPlayButton.addEventListener('click', onElVideoPlayButtonClick);
+  }
   addReviewsEventListeners();
 
   // Slider
