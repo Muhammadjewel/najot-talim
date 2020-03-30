@@ -50,7 +50,8 @@
   color: #222222;
   transition: color $transition-duration ease;
 }
-.sitenav__link:hover {
+.sitenav__link:hover,
+.sitenav__item--active .sitenav__link {
   color: $primary-color;
 }
 .sitenav__signup-link {
