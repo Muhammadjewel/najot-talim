@@ -97,3 +97,34 @@
     color: #fff;
   }
 }
+@media (max-width: 1050px) {
+  .learning-process__step {
+    margin: 0 15px;
+  }
+  .learning-process__circle {
+    width: 130px;
+    height: 130px;
+    margin: 0 13px;
+  }
+}
+@media (max-width: 950px) {
+  .learning-process__step {
+    margin: 0 10px;
+  }
+  .learning-process__circle {
+    width: 110px;
+    height: 110px;
+    margin: 0 16px;
+  }
+}
+@media (max-width: 870px) {
+  .learning-process__step {
+    width: 100px;
+    height: 100px;
+  }
+  .learning-process__circle {
+    width: 110px;
+    height: 110px;
+    margin: 0 5px;
+  }
+}
