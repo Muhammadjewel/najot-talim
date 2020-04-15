@@ -2,6 +2,14 @@
   position: relative;
   padding: 20px 0;
 }
+.learning-process__hover-line {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  background-color: $primary-color;
+}
 .learning-process__circles {
   position: absolute;
   top: 50%;
