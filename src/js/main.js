@@ -81,20 +81,39 @@ document.addEventListener('DOMContentLoaded', function () {
   var elsLearningProcessLine = $('.learning-process__hover-line');
   var elsLearningProcessStep = $$('.learning-process__step');
 
-  var onProcessStepMouseOver = function (evt) {
-    console.dir(evt.target);
-    evt.target.classList.add('learning-process__step--active');
+  var removeActiveStepClasses = function () {
+    elsLearningProcessStep.forEach(function (processStep) {
+      processStep.classList.remove('learning-process__step--active');
+    });
+  };
+
+  var addActiveStepClasses = function (hoveredItemOrder) {
+    elsLearningProcessStep.forEach(function (processStep, index) {
+      if (index + 1 > hoveredItemOrder) {
+        return;
+      }
+
+      processStep.classList.add('learning-process__step--active');
+    });
+  };
+
+  var setElProcessLineWidth = function (evt) {
     elsLearningProcessLine.style.width = evt.screenX - elsLearningProcessTimeline.offsetLeft + 'px';
+  };
+
+  var onProcessStepMouseOver = function (evt) {
+    var hoveredItemOrder = parseInt(evt.target.dataset.step, 10);
+    addActiveStepClasses(hoveredItemOrder);
+    setElProcessLineWidth(evt);
   };
 
   var onProcessStepMouseLeave = function (evt) {
     elsLearningProcessLine.style.width = 0;
-    evt.target.classList.remove('learning-process__step--active');
+    removeActiveStepClasses();
   };
 
   elsLearningProcessStep.forEach(function (processStep) {
     processStep.addEventListener('mouseover', onProcessStepMouseOver);
-
     processStep.addEventListener('mouseleave', onProcessStepMouseLeave);
   });
 
