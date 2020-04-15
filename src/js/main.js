@@ -76,6 +76,28 @@ document.addEventListener('DOMContentLoaded', function () {
     playIntroVideo(iframeSource);
   };
 
+  // LEARNING PROCESS TIMELINE
+  var elsLearningProcessTimeline = $('.learning-process__timeline');
+  var elsLearningProcessLine = $('.learning-process__hover-line');
+  var elsLearningProcessStep = $$('.learning-process__step');
+
+  var onProcessStepMouseOver = function (evt) {
+    console.dir(evt.target);
+    evt.target.classList.add('learning-process__step--active');
+    elsLearningProcessLine.style.width = evt.screenX - elsLearningProcessTimeline.offsetLeft + 'px';
+  };
+
+  var onProcessStepMouseLeave = function (evt) {
+    elsLearningProcessLine.style.width = 0;
+    evt.target.classList.remove('learning-process__step--active');
+  };
+
+  elsLearningProcessStep.forEach(function (processStep) {
+    processStep.addEventListener('mouseover', onProcessStepMouseOver);
+
+    processStep.addEventListener('mouseleave', onProcessStepMouseLeave);
+  });
+
   // Opening and closing reviews
   var openReview = function (evt) {
     evt.target.closest('.review').classList.add('review--open');
