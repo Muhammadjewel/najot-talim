@@ -128,3 +128,40 @@
     margin: 0 5px;
   }
 }
+@media (max-width: 775px) {
+  .learning-process__text {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .learning-process__list {
+    flex-wrap: wrap;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .learning-process__hover-line,
+  .learning-process__circles,
+  .learning-process__start,
+  .learning-process__finish {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .learning-process__step {
+    margin: 0 5px;
+  }
+}
+@media (max-width: 390px) {
+  .learning-process__list {
+    justify-content: space-around;
+  }
+  .learning-process__step {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}

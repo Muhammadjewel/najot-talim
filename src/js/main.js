@@ -112,10 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
     removeActiveStepClasses();
   };
 
-  elsLearningProcessStep.forEach(function (processStep) {
-    processStep.addEventListener('mouseover', onProcessStepMouseOver);
-    processStep.addEventListener('mouseleave', onProcessStepMouseLeave);
-  });
+  if (document.documentElement.clientWidth >= 690) {
+    elsLearningProcessStep.forEach(function (processStep) {
+      processStep.addEventListener('mouseover', onProcessStepMouseOver);
+      processStep.addEventListener('mouseleave', onProcessStepMouseLeave);
+    });
+  }
 
   // Opening and closing reviews
   var openReview = function (evt) {
