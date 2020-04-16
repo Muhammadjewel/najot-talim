@@ -19,9 +19,8 @@
   color: #fff;
 }
 .post:hover .button__text {
-  max-width: 3000px;
-  margin-right: 7px;
-  transform: scaleX(1);
+  width: 100%;
+  transition: width $transition-duration ease;
 }
 .post:hover svg {
   fill: #fff;

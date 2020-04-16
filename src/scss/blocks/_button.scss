@@ -39,21 +39,14 @@
   align-items: center;
 }
 .button__text {
-  display: inline-block;
-  max-width: 0;
+  width: 0;
   overflow: hidden;
-  transform-origin: left center;
-  transform: scaleX(0);
-  transition: transform $transition-duration ease,
-    max-width $transition-duration ease,
-    margin $transition-duration ease;
 }
 .button--open .button__text,
 .button:hover .button__text,
 .button:focus .button__text {
-  max-width: 3000px;
-  margin-right: 7px;
-  transform: scaleX(1);
+  width: 100%;
+  transition: width $transition-duration ease;
 }
 .button--open svg,
 .button:hover svg,
