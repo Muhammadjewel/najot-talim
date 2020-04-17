@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var elsReviewVideoButton = $$('.review__video-button');
   var elsReviewCloseButton = $$('.review__close-button');
   var elModal = $('.modal');
-  var elModalCloseButton = elModal.querySelector('.modal__close-button');
-  var elModalIframe = elModal.querySelector('.modal__youtube-iframe');
+  var elModalCloseButton = $('.modal__close-button');
+  var elModalIframe = $('.modal__youtube-iframe');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -223,47 +223,51 @@ document.addEventListener('DOMContentLoaded', function () {
   addReviewsEventListeners();
 
   // Slider
-  var promoSlider = tns({
-    container: '.promo-slider__list',
-    nav: true,
-    controls: false,
-    items: 1,
-    slideBy: 1,
-    autoplay: true,
-    autoplayButtonOutput: false,
-    mouseDrag: true,
-    swipeAngle: false,
-    loop: true
-  });
+  if ($('.promo-slider__list')) {
+    var promoSlider = tns({
+      container: '.promo-slider__list',
+      nav: true,
+      controls: false,
+      items: 1,
+      slideBy: 1,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      swipeAngle: false,
+      loop: true
+    });
+  }
 
-  var companiesSlider = tns({
-    container: '.companies__list',
-    nav: false,
-    items: 1,
-    slideBy: 1,
-    autoplay: false,
-    mouseDrag: true,
-    swipeAngle: false,
-    loop: true,
-    prevButton: '.slider-button--prev',
-    nextButton: '.slider-button--next',
-    responsive: {
-      480: {
-        items: 2,
-        slideBy: 2
-      },
-      680: {
-        items: 3,
-        slideBy: 3
-      },
-      900: {
-        items: 4,
-        slideBy: 4
-      },
-      1200: {
-        items: 5,
-        slideBy: 5
+  if ($('.companies__list')) {
+    var companiesSlider = tns({
+      container: '.companies__list',
+      nav: false,
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      mouseDrag: true,
+      swipeAngle: false,
+      loop: true,
+      prevButton: '.slider-button--prev',
+      nextButton: '.slider-button--next',
+      responsive: {
+        480: {
+          items: 2,
+          slideBy: 2
+        },
+        680: {
+          items: 3,
+          slideBy: 3
+        },
+        900: {
+          items: 4,
+          slideBy: 4
+        },
+        1200: {
+          items: 5,
+          slideBy: 5
+        }
       }
-    }
-  });
+    });
+  }
 });
