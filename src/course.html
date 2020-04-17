@@ -96,6 +96,50 @@
 
   <main class="main-content">
 
+
+    <section class="registration" id="registration">
+      <div class="container registration__container">
+        <form class="registration-form" method="POST">
+          <h2 class="registration-form__heading">Ro'yxatdan o'tish</h2>
+          <p class="registration-form__text">Sizni qiziqtira olgan o'quv kursni tanlang va bepul ochiq darsga ro'yxatdan
+            o'ting.</p>
+          <p class="registration-form__group">
+            <label class="visually-hidden" for="name-input-footer">Ism*</label>
+            <input class="registration-form__field" id="name-input-footer" name="name" type="text" placeholder="Ism"
+              required>
+          </p>
+          <p class="registration-form__group">
+            <label class="visually-hidden" for="phone-input-footer">Telefon raqami*</label>
+            <input class="registration-form__field" id="phone-input-footer" name="phone_number" type="tel"
+              placeholder="+998 (__) ___ __ __" required>
+          </p>
+          <p class="registration-form__group">
+            <label class="visually-hidden" for="course-select-footer">O'quv kurs</label>
+            <select class="registration-form__field" name="course" id="course-select-footer">
+              <option value="" selected disabled>Kursni tanlang</option>
+              <option value="frontend">Frontend dasturlash</option>
+              <option value="backend">Backend dasturlash</option>
+              <option value="graphic_design">Grafik dizayn</option>
+              <option value="smm">SMM</option>
+              <option value="digital_marketing">Raqamli marketing</option>
+            </select>
+          </p>
+          <button class="button button--open" type="submit">
+            <span class="button__wrapper">
+              <span class="button__text">Ro'yxatdan o'tish</span>
+              <svg class="button__arrow" aria-hidden="true" focusable="false" width="21" height="12">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+    
+        <div class="registration__motto">
+          <img class="registration__logo" src="img/logo-mark-text.svg" alt="Najot Ta'lim logotipi" width="270" height="58">
+          <p class="registration__text">Ro'yxatdan o'tib biz bilan o'rganing!</p>
+        </div>
+      </div>
+    </section>
   </main>
 
 
