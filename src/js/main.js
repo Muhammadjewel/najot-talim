@@ -263,3 +263,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+
+// IMAGE GALLERY VIA MAGNIFIC POPUP LIBRARY
+$(document).ready(function () {
+  $('.magnific-popup-trigger').magnificPopup({ 
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
+});

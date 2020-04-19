@@ -14,7 +14,9 @@ var sources = {
   html: 'src/*.html',
   scss: 'src/scss/**/*.scss',
   js: [
+    'node_modules/zepto/dist/zepto.min.js',
     'node_modules/tiny-slider/dist/min/tiny-slider.js',
+    'src/js/jquery.magnific-popup.min.js',
     'src/js/main.js'
   ]
 };
