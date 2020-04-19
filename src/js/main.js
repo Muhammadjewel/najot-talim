@@ -1,11 +1,3 @@
-var $ = function (selector) {
-  return document.querySelector(selector);
-};
-
-var $$ = function (selector) {
-  return document.querySelectorAll(selector);
-};
-
 var debounce = function (func, wait, immediate) {
   var timeout;
   return function () {
@@ -26,17 +18,17 @@ var ESC_KEYCODE = 27;
 var REVIEW_VIDEO_LINK;
 
 document.addEventListener('DOMContentLoaded', function () {
-  var elSitenav = $('.sitenav');
-  var elSitenavToggler = $('.sitenav__toggler');
-  var elIntroVideoWrapper = $('.intro__video-wrapper');
-  var elVideoPlayButton = $('.intro__play-button');
-  var elIntroVideo = $('.intro__video');
-  var elsReviewOpener = $$('.review__opener');
-  var elsReviewVideoButton = $$('.review__video-button');
-  var elsReviewCloseButton = $$('.review__close-button');
-  var elModal = $('.modal');
-  var elModalCloseButton = $('.modal__close-button');
-  var elModalIframe = $('.modal__youtube-iframe');
+  var elSitenav = document.querySelector('.sitenav');
+  var elSitenavToggler = document.querySelector('.sitenav__toggler');
+  var elIntroVideoWrapper = document.querySelector('.intro__video-wrapper');
+  var elVideoPlayButton = document.querySelector('.intro__play-button');
+  var elIntroVideo = document.querySelector('.intro__video');
+  var elsReviewOpener = document.querySelectorAll('.review__opener');
+  var elsReviewVideoButton = document.querySelectorAll('.review__video-button');
+  var elsReviewCloseButton = document.querySelectorAll('.review__close-button');
+  var elModal = document.querySelector('.modal');
+  var elModalCloseButton = document.querySelector('.modal__close-button');
+  var elModalIframe = document.querySelector('.modal__youtube-iframe');
   
   // Open sitenav if JS is disabled
   elSitenav.classList.remove('sitenav--nojs');
@@ -77,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // LEARNING PROCESS TIMELINE
-  var elsLearningProcessTimeline = $('.learning-process__timeline');
-  var elsLearningProcessLine = $('.learning-process__hover-line');
-  var elsLearningProcessStep = $$('.learning-process__step');
+  var elsLearningProcessTimeline = document.querySelector('.learning-process__timeline');
+  var elsLearningProcessLine = document.querySelector('.learning-process__hover-line');
+  var elsLearningProcessStep = document.querySelectorAll('.learning-process__step');
 
   var removeActiveStepClasses = function () {
     elsLearningProcessStep.forEach(function (processStep) {
@@ -223,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
   addReviewsEventListeners();
 
   // Slider
-  if ($('.promo-slider__list')) {
+  if (document.querySelector('.promo-slider__list')) {
     var promoSlider = tns({
       container: '.promo-slider__list',
       nav: true,
@@ -238,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if ($('.companies__list')) {
+  if (document.querySelector('.companies__list')) {
     var companiesSlider = tns({
       container: '.companies__list',
       nav: false,
