@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  padding: 0;
+  list-style-type: none;
+}
+.pagination__item,
+.pagination__prev,
+.pagination__next {
+  margin: 5px;
+}
+.pagination__link {
+  min-width: 35px;
+  transition: background-color $transition-duration ease,
+    color $transition-duration ease;
+}
