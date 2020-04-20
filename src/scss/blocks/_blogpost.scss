@@ -1,0 +1,30 @@
+.blogpost {
+  max-width: 900px;
+  margin: 50px auto 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+}
+.blogpost__inner {
+  padding: 30px;
+}
+.blogpost__title {
+  margin-top: 0;
+}
+.blogpost__meta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  color: #555;
+}
+.blogpost__meta {
+  margin-right: 25px;
+}
+.blogpost__content {
+  line-height: 1.5;
+}
+@media (max-width: 775px) {
+  .blogpost {
+    margin-top: 40px;
+  }
+}
